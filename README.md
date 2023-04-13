@@ -1,2 +1,18 @@
-i am committing from branch to main
+| Error Type                                                                                              | Error Desc                                                                               | App Error Code | HTTP Status Code | HTTP Status Desc      | Retry Possible | Retry Count | Ultimate action           | MS Error Level |
+| ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------- | ---------------- | --------------------- | -------------- | ----------- | ------------------------- | -------------- |
+| AUTHORIZATION_FAILURE                                                                                   | Missing required headers (PAC-Channel-Code, PAC-Application-ID, or PAC-Organization-ID)  | MS-401         | 401              | Unauthorized          | No             | 0           | Caller to analyze         | ERROR          |
+| INVALID_API_KEY                                                                                         | missing PAC-API-Key                                                                      | MS-401         | 401              | Unauthorized          | No             | 0           | Caller to analyze         | ERROR          |
+| An invalid API key provided                                                                             |
+| INVALID_REQUEST_ID                                                                                      | missing Request-ID                                                                       | MS-400         | 400              | Bad Request           | No             | 0           | Caller to analyze         | ERROR          |
+| BAD_REQUEST                                                                                             | A seasonCode, facilityCode, or startDate query that is undefined (e.g. seasonCode=)      | MS-400         | 400              | Bad Request           | No             | 0           | Caller to analyze         | ERROR          |
+| missing Request-ID                                                                                      |
+| UNAUTHORIZED_REQUEST                                                                                    | A PAC-Organization-ID provided that does not have the correct access controls set up     | MS-403         | 403              | Forbidden             | No             | 0           | Caller to analyze         | ERROR          |
+| A valid seasonCode, albeit one that the requester does not have access to based on client setup context |
+| UNHANDLED_EXCEPTION                                                                                     | A call made where the API can't properly connect/read the internal channel configuration | MS-500         | 500              | Internal Server Error | Yes            | 3           | Caller to inform Provider | FATAL          |
+| NOT_FOUND                                                                                               | An otherwise valid but undefined seasonCode                                              | MS-404         | 404              | Not Found             | No             | 0           | Caller to analyze         | ERROR          |
+| An otherwise valid but undefined facilityCode                                                           |
+| INVALID_INPUT                                                                                           | A request made with a startDate in the past                                              | MS-422         | 422              | Unprocessable Content | No             | 0           | Caller to analyze         | ERROR          |
+
+
+
 
