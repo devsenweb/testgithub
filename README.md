@@ -1,5 +1,5 @@
 | Error Type           | Error Desc                                              | App Error Code | HTTP Status Code | HTTP Status Desc      | Retry Possible | Retry Count | Ultimate action   | MS Error Level |
 | -------------------- | ------------------------------------------------------- | -------------- | ---------------- | --------------------- | -------------- | ----------- | ----------------- | -------------- |
 | INVALID_TOKEN        | token is invalid                                        | MS-422         | 422              | Unprocessable Content | No             | 0           | Caller to analyze | ERROR          |
-| TOKEN_NOT_FOUND      | token doesn't exist                                     | MS-404         | 404              | Not Found             | No             | 0           | Caller to analyze | ERROR          |
 | UNPROCESSABLE_ENTITY | The request payload cannot contain more than 100 tokens | MS-422         | 422              | Unprocessable Content | No             | 0           | Caller to analyze | ERROR          |
+| SEAT_RECORD_LOCKED   | Seat is locked                                          | MS-409         | 409              | Conflict              | No             | 0           | Caller to analyze | ERROR          |
