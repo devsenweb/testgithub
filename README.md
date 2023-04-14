@@ -1,4 +1,5 @@
-| Error Type          | Error Desc                                          | App Error Code | HTTP Status Code | HTTP Status Desc      | Retry Possible | Retry Count | Ultimate action           | MS Error Level |
-| ------------------- | --------------------------------------------------- | -------------- | ---------------- | --------------------- | -------------- | ----------- | ------------------------- | -------------- |
-| LISTINGID_NOT_FOUND | listingId does not exit                             | MS-404         | 404              | Not Found             | No             | 0           | Caller to analyze         | ERROR          |
-| SERVER_ERROR        | Internal server error occurred due to backend error | MS-500         | 500              | Internal Server Error | Yes            | 3           | Caller to inform Provider | FATAL          |
+| Error Type           | Error Desc                                              | App Error Code | HTTP Status Code | HTTP Status Desc      | Retry Possible | Retry Count | Ultimate action   | MS Error Level |
+| -------------------- | ------------------------------------------------------- | -------------- | ---------------- | --------------------- | -------------- | ----------- | ----------------- | -------------- |
+| INVALID_TOKEN        | token is invalid                                        | MS-422         | 422              | Unprocessable Content | No             | 0           | Caller to analyze | ERROR          |
+| TOKEN_NOT_FOUND      | token doesn't exist                                     | MS-404         | 404              | Not Found             | No             | 0           | Caller to analyze | ERROR          |
+| UNPROCESSABLE_ENTITY | The request payload cannot contain more than 100 tokens | MS-422         | 422              | Unprocessable Content | No             | 0           | Caller to analyze | ERROR          |
